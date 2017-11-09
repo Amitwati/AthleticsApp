@@ -27,7 +27,7 @@
             android:id="@+id/input_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter username"
+            android:hint="הכנס/י שם משתמש"
             android:textSize="20dp"
             android:maxLines="1"/>
 
@@ -44,7 +44,7 @@
             android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter password"
+            android:hint="הכנס/י סיסמא"
             android:textSize="20dp"
             android:maxLines="1"
             android:inputType="textPassword"/>
@@ -59,7 +59,7 @@
         android:background="@drawable/round"
         android:backgroundTint="@color/colorPrimary"
         android:elevation="15dp"
-        android:text="Log in"
+        android:text="התחבר"
         android:textAllCaps="false"
         android:textColor="@color/colorBright"
         android:layout_marginTop="20dp"
