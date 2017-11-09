@@ -7,27 +7,10 @@
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context="com.example.amitwati.athleticsapp.MainActivity">
-    <org.eazegraph.lib.charts.ValueLineChart
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cubiclinechart"
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:egUseCubic="true"
-        app:egUseOverlapFill="true"
-        app:egCurveSmoothness="0.0"
-        app:egIndicatorLineColor="#FE6DA8"
-        app:egLegendHeight="40dp"
-        app:egShowStandardValue="true"/>
+        android:layout_height="300dp" />
 
-    <org.eazegraph.lib.charts.PieChart
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/piechart"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:padding="8dp"
-        app:egLegendTextSize="18sp"
-        app:egUsePieRotation="true"
-        app:egValueTextSize="36sp"
-        android:layout_below="@+id/cubiclinechart"/>
 
 </RelativeLayout>

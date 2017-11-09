@@ -25,6 +25,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
-    implementation 'com.nineoldandroids:library:2.4.0'
+    //implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    //implementation 'com.nineoldandroids:library:2.4.0'
+    //implementation 'me.ithebk:barchart:0.9'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.1.6'
 }
