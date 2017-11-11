@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -81,13 +82,23 @@ public class MenuActivity extends AppCompatActivity {
         builder.setView(v);
 
         //build the alert dialog view
-        AlertDialog dialog = builder.create();
+        final AlertDialog dialog = builder.create();
 
         //remove the titlebar
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         //show the dialog
         dialog.show();
+
+        //set the dismiss btn
+        ImageView back_btn = v.findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
 
     }
 
