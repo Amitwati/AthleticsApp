@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -51,7 +52,6 @@ public class MenuActivity extends AppCompatActivity {
 
         //set the buttons
         ListView lv = (ListView)findViewById(R.id.menu_list);
-        ArrayList<Button> a = new ArrayList<>();
 
         String[] btns = {"האתלטים שלי","תחרויות",
                 "מדידות","אימונים","חישוב נקודות"};
@@ -74,9 +74,6 @@ public class MenuActivity extends AppCompatActivity {
         ListView lv = (ListView)v.findViewById(R.id.list_view);
         AdapterMenu adapterMenu = new AdapterMenu(this, new String[]{"עמית טואטי","עומרי אבידן","ירדן צ'רי","אביב אדר","דני ברומברג","אדיר אבוחצירה","מייקל ג'קסון","אלן פריד",},"BLUE");
         lv.setAdapter(adapterMenu);
-
-        //set the height of the listview dynamically
-        //setListViewHeightBasedOnChildren(lv);
 
         //set the view to the dialog
         builder.setView(v);
