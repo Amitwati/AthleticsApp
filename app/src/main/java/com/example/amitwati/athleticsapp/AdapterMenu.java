@@ -26,26 +26,29 @@ import java.util.Arrays;
  */
 
 public class AdapterMenu extends BaseAdapter {
-    ArrayList<String> buttons;
+    ArrayList<String> buttons_titles;
+    ArrayList<View.OnClickListener> buttons_listeners;
     Context context;
     LayoutInflater inflater;
     String color;
 
-    public AdapterMenu(Context c,String[] b,String col) {
+    public AdapterMenu(Context c, String[] btns, ArrayList<View.OnClickListener> listener_list , String col) {
         context = c;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        buttons = new ArrayList<>(Arrays.asList(b));
+        buttons_titles = new ArrayList<>();
         color = col;
+        buttons_titles = new ArrayList<>(Arrays.asList(btns));
+        buttons_listeners = listener_list;
     }
 
     @Override
     public int getCount() {
-        return buttons.size();
+        return buttons_titles.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return buttons.get(i);
+        return buttons_titles.get(i);
     }
 
     @Override
@@ -57,8 +60,8 @@ public class AdapterMenu extends BaseAdapter {
     public View getView(final int i, View view, ViewGroup viewGroup) {
         @SuppressLint("ViewHolder") final View v = inflater.inflate(R.layout.menu_list_item,null);
         Button b =  v.findViewById(R.id.btn_item);
-
-        b.setText(buttons.get(i));
+        b.setText(buttons_titles.get(i));
+        b.setOnClickListener(buttons_listeners.get(i));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             switch (color) {
@@ -84,14 +87,6 @@ public class AdapterMenu extends BaseAdapter {
                     break;
             }
         }
-
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Helper.ShowDialog(context,new String[]{"שיאים אישיים","תוצאות תחרויות","תוצאות מדידות"},((Button)view).getText().toString(),"YELLOW");
-
-            }
-        });
 
 
         return v;

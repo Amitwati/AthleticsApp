@@ -24,6 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -56,24 +57,21 @@ public class MenuActivity extends AppCompatActivity {
     public void open_dialog(View view) {
         switch(view.getId()) {
             case R.id.my_athletes:
-                Helper.ShowDialog(this, new String[]{"עומרי אבידן", "עמית טואטי", "ירדן צ'רי", "סקאזי", "אילון מתנה"},
+                final String[] names = new String[]{"עומרי אבידן", "עמית טואטי", "ירדן צ'רי", "סקאזי", "אילון מתנה"};
+                ArrayList<View.OnClickListener> listeners = new ArrayList<>();
+                final Context c = this;
+                for(int i=0;i<names.length;i++){
+                    listeners.add(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String s = ((Button)view).getText().toString();
+                            Helper.ShowMenuDialog(c,s,"YELLOW");
+                        }
+                    });
+                }
+
+                Helper.ShowDialog(this, names,listeners,
                         ((Button) view).getText().toString(), "BLUE");
-                break;
-            case R.id.competition:
-                Helper.ShowDialog(this, new String[]{"עומרי אבידן הומו"},
-                        ((Button) view).getText().toString(), "RED");
-                break;
-            case R.id.measurements:
-                Helper.ShowDialog(this, new String[]{"ירדן צ'רי הומו"},
-                        ((Button) view).getText().toString(), "GREEN");
-                break;
-            case R.id.trainings:
-                Helper.ShowDialog(this, new String[]{"אילון מתנה גיי"},
-                        ((Button) view).getText().toString(), "GREEN");
-                break;
-            case R.id.calc_points:
-                Helper.ShowDialog(this, new String[]{"עמית הגבר :)"},
-                        ((Button) view).getText().toString(), "YELLOW");
                 break;
 
         }
