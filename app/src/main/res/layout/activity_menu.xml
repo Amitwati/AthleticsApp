@@ -34,18 +34,96 @@
             android:layout_height="150dp"
             android:src="@drawable/ic_icon"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:onClick="dialog"/>
+            android:layout_marginTop="15dp" />
 
-        <ListView
-            android:id="@+id/menu_list"
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:divider="@null"
-            android:layout_below="@id/logo">
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/logo"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="10">
 
-        </ListView>
+            <Button
+                android:id="@+id/my_athletes"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/colorPrimary_RED"
+                android:elevation="15dp"
+                android:text="האתלטים שלי"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBright_RED"
+                android:textSize="18dp"
+                android:layout_margin="7dp"
+                android:onClick="open_dialog"/>
+
+            <Button
+                android:id="@+id/competition"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/colorPrimary_RED"
+                android:elevation="15dp"
+                android:text="תחרויות"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBright_RED"
+                android:textSize="18dp"
+                android:layout_margin="7dp"
+                android:onClick="open_dialog"/>
+
+            <Button
+                android:id="@+id/measurements"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/colorPrimary_RED"
+                android:elevation="15dp"
+                android:text="מדידות"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBright_RED"
+                android:textSize="18dp"
+                android:layout_margin="7dp"
+                android:onClick="open_dialog"/>
+
+            <Button
+                android:id="@+id/trainings"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/colorPrimary_RED"
+                android:elevation="15dp"
+                android:text="אימונים"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBright_RED"
+                android:textSize="18dp"
+                android:layout_margin="7dp"
+                android:onClick="open_dialog"/>
+
+            <Button
+                android:id="@+id/calc_points"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/colorPrimary_RED"
+                android:elevation="15dp"
+                android:text="חישוב נקודות"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBright_RED"
+                android:textSize="18dp"
+                android:layout_margin="7dp"
+                android:onClick="open_dialog"/>
+
+
+
+        </LinearLayout>
+
     </RelativeLayout>
 
 </RelativeLayout>

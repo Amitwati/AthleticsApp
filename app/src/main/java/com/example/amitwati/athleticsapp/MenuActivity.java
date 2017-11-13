@@ -50,53 +50,32 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        //set the buttons
-        ListView lv = (ListView)findViewById(R.id.menu_list);
-
-        String[] btns = {"האתלטים שלי","תחרויות",
-                "מדידות","אימונים","חישוב נקודות"};
-
-        AdapterMenu menu = new AdapterMenu(this,btns,"RED");
-        lv.setAdapter(menu);
 
     }
 
-    //show the popup dialog
-    public void dialog(View view) {
-        //build the dialog
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    public void open_dialog(View view) {
+        switch(view.getId()) {
+            case R.id.my_athletes:
+                Helper.ShowDialog(this, new String[]{"עומרי אבידן", "עמית טואטי", "ירדן צ'רי", "סקאזי", "אילון מתנה"},
+                        ((Button) view).getText().toString(), "BLUE");
+                break;
+            case R.id.competition:
+                Helper.ShowDialog(this, new String[]{"עומרי אבידן הומו"},
+                        ((Button) view).getText().toString(), "RED");
+                break;
+            case R.id.measurements:
+                Helper.ShowDialog(this, new String[]{"ירדן צ'רי הומו"},
+                        ((Button) view).getText().toString(), "GREEN");
+                break;
+            case R.id.trainings:
+                Helper.ShowDialog(this, new String[]{"אילון מתנה גיי"},
+                        ((Button) view).getText().toString(), "GREEN");
+                break;
+            case R.id.calc_points:
+                Helper.ShowDialog(this, new String[]{"עמית הגבר :)"},
+                        ((Button) view).getText().toString(), "YELLOW");
+                break;
 
-        //inflate the main view for the dialog
-        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflater.inflate(R.layout.list_dialog_layout,null);
-
-        //change the view's params
-        ListView lv = (ListView)v.findViewById(R.id.list_view);
-        AdapterMenu adapterMenu = new AdapterMenu(this, new String[]{"עמית טואטי","עומרי אבידן","ירדן צ'רי","אביב אדר","דני ברומברג","אדיר אבוחצירה","מייקל ג'קסון","אלן פריד",},"BLUE");
-        lv.setAdapter(adapterMenu);
-
-        //set the view to the dialog
-        builder.setView(v);
-
-        //build the alert dialog view
-        final AlertDialog dialog = builder.create();
-
-        //remove the titlebar
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        //show the dialog
-        dialog.show();
-
-        //set the dismiss btn
-        ImageView back_btn = v.findViewById(R.id.back_btn);
-        back_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
-
-
+        }
     }
-
 }

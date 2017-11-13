@@ -2,14 +2,20 @@ package com.example.amitwati.athleticsapp;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Build;
 import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.security.PublicKey;
 import java.util.ArrayList;
@@ -51,6 +57,7 @@ public class AdapterMenu extends BaseAdapter {
     public View getView(final int i, View view, ViewGroup viewGroup) {
         @SuppressLint("ViewHolder") final View v = inflater.inflate(R.layout.menu_list_item,null);
         Button b =  v.findViewById(R.id.btn_item);
+
         b.setText(buttons.get(i));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -77,6 +84,15 @@ public class AdapterMenu extends BaseAdapter {
                     break;
             }
         }
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Helper.ShowDialog(context,new String[]{"שיאים אישיים","תוצאות תחרויות","תוצאות מדידות"},((Button)view).getText().toString(),"YELLOW");
+
+            }
+        });
+
 
         return v;
     }
