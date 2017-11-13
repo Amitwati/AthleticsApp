@@ -64,8 +64,20 @@ public class MenuActivity extends AppCompatActivity {
                     listeners.add(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            String s = ((Button)view).getText().toString();
-                            Helper.ShowMenuDialog(c,s,"YELLOW");
+                            final String s = ((Button)view).getText().toString();
+
+                            String[] titles = new String[]{"שיאים אישיים","תוצאות תחרויות","תוצאות מדידות"};
+                            ArrayList<View.OnClickListener> l = new ArrayList<>();
+                            for(String i:titles)
+                                l.add(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Toast.makeText(MenuActivity.this, "here im going to start new intent\nname is "+s+"\nand i have context :P",
+                                                Toast.LENGTH_LONG).show();
+                                    }
+                                });
+
+                            Helper.ShowDialog(c,titles,l,s,"GREEN");
                         }
                     });
                 }
