@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.amitwati.athleticsapp.activity_competition"
+    android:background="@color/colorBright_YELLOW">
+
+
+    <Button
+        android:id="@+id/Lbutton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="35dp"
+        android:layout_toLeftOf="@+id/YearView"
+        android:layout_toStartOf="@+id/YearView"
+        android:background="@drawable/ic_chevron_left_black_24dp" />
+
+    <Button
+        android:id="@+id/Rbutton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ListView"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@+id/YearView"
+        android:layout_toRightOf="@+id/YearView"
+        android:background="@drawable/ic_chevron_right_black_24dp" />
+
+    <TextView
+        android:id="@+id/YearView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Lbutton"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary_YELLOW"
+        android:textSize="40dp"
+        android:typeface="serif" />
+
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/YearView"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:layout_marginBottom="90dp"
+        android:divider="@null"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/ic_add_circle_black"
+        android:text=""
+        android:backgroundTint="@color/colorPrimary_YELLOW"/>
+</RelativeLayout>
