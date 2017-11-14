@@ -61,7 +61,8 @@ public class AdapterMenu extends BaseAdapter {
         @SuppressLint("ViewHolder") final View v = inflater.inflate(R.layout.menu_list_item,null);
         Button b =  v.findViewById(R.id.btn_item);
         b.setText(buttons_titles.get(i));
-        b.setOnClickListener(buttons_listeners.get(i));
+        if(buttons_listeners!=null)
+            b.setOnClickListener(buttons_listeners.get(i));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             switch (color) {

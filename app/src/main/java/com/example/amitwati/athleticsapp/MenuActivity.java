@@ -42,7 +42,7 @@ public class MenuActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.main_toolbar);
         myToolbar.setTitle("אתלטי הנגב");
         setSupportActionBar(myToolbar);
-
+        Button CompBtn=(Button)findViewById(R.id.competition);
         //set back button on the toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -51,10 +51,20 @@ public class MenuActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
+        CompBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToCompActivity(view);
+            }
+        });
 
     }
 
+    public void ToCompActivity(View view)
+    {
+        Intent i = new Intent(this,activity_competition.class);
+        startActivity(i);
+    }
     public void open_dialog(View view) {
         switch(view.getId()) {
             case R.id.my_athletes:
@@ -112,4 +122,6 @@ public class MenuActivity extends AppCompatActivity {
 
         }
     }
+
+
 }
