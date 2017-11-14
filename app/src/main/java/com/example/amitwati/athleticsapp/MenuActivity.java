@@ -72,7 +72,7 @@ public class MenuActivity extends AppCompatActivity {
                                 l.add(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        Toast.makeText(MenuActivity.this, "here im going to start new intent\nname is "+s+"\nand i have context :P",
+                                        Toast.makeText(MenuActivity.this, "here im going to start new intent\nname is "+s+"\nand i have context",
                                                 Toast.LENGTH_LONG).show();
                                     }
                                 });
