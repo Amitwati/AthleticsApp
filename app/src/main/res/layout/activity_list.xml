@@ -42,7 +42,7 @@
                 android:autoSizeTextType="uniform"
                 android:gravity="center"
                 android:text="כותרת"
-                android:textColor="@color/colorBright_YELLOW"
+                android:textColor="@color/colorAccent_YELLOW"
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -66,13 +66,127 @@
             android:textStyle="bold"
             android:layout_centerHorizontal="true"/>
 
-        <ListView
-            android:id="@+id/list_layout_lv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@+id/list_title"
-            android:divider="@null"
-            tools:listitem="@layout/menu_list_item"/>
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <Button
+                    android:id="@+id/merhak"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_password_layout"
+                    android:background="@drawable/round"
+                    android:backgroundTint="@color/colorPrimary_YELLOW"
+                    android:elevation="15dp"
+                    android:text="קפיצה למרק"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent_YELLOW"
+                    android:layout_margin="5dp"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/gova"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_password_layout"
+                    android:background="@drawable/round"
+                    android:backgroundTint="@color/colorPrimary_YELLOW"
+                    android:elevation="15dp"
+                    android:text="קפיצה לגובה"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent_YELLOW"
+                    android:layout_margin="5dp"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/ritza100"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_password_layout"
+                    android:background="@drawable/round"
+                    android:backgroundTint="@color/colorPrimary_YELLOW"
+                    android:elevation="15dp"
+                    android:text="ריצת 100 מטר"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent_YELLOW"
+                    android:layout_margin="5dp"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/s1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_password_layout"
+                    android:background="@drawable/round"
+                    android:backgroundTint="@color/colorPrimary_YELLOW"
+                    android:elevation="15dp"
+                    android:text="גלגלונים"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent_YELLOW"
+                    android:layout_margin="5dp"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/s2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_password_layout"
+                    android:background="@drawable/round"
+                    android:backgroundTint="@color/colorPrimary_YELLOW"
+                    android:elevation="15dp"
+                    android:text="ריקודי בטן"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent_YELLOW"
+                    android:layout_margin="5dp"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/s3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_password_layout"
+                    android:background="@drawable/round"
+                    android:backgroundTint="@color/colorPrimary_YELLOW"
+                    android:elevation="15dp"
+                    android:text="עמידה על הידיים"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent_YELLOW"
+                    android:layout_margin="5dp"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/s4"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/input_password_layout"
+                    android:background="@drawable/round"
+                    android:backgroundTint="@color/colorPrimary_YELLOW"
+                    android:elevation="15dp"
+                    android:text="ריקודים עם חישוקים"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent_YELLOW"
+                    android:layout_margin="5dp"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
     </RelativeLayout>
 
 

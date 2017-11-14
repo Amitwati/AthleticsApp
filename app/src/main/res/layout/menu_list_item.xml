@@ -16,7 +16,6 @@
         android:textAllCaps="false"
         android:textColor="@color/colorBright_GREEN"
         android:layout_margin="10dp"
-        android:textSize="18dp"
-        android:onClick="tomenu"/>
+        android:textSize="18dp"/>
 
 </RelativeLayout>

@@ -20,8 +20,8 @@
     <color name="colorAccent_BLUE">#307a9f</color>
     <color name="colorBright_BLUE">#e2e8ec</color>
 
-    <color name="colorPrimaryDark_YELLOW">#2d2b21</color>
-    <color name="colorPrimary_YELLOW">#c29d50</color>
-    <color name="colorAccent_YELLOW">#efd091</color>
+    <color name="colorPrimaryDark_YELLOW">#c47f1b</color>
+    <color name="colorPrimary_YELLOW">#ebb233</color>
+    <color name="colorAccent_YELLOW">#ffffff</color>
     <color name="colorBright_YELLOW">#ecebde</color>
 </resources>
