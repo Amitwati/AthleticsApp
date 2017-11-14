@@ -32,12 +32,17 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
+        //get the extras from the calling intent
         Bundle extra = getIntent().getExtras();
-
         assert extra != null;
+
+        //set the title
         String title = extra.getString("TITLE");
-        //Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
         ((TextView)findViewById(R.id.tb_title)).setText(title);
+
+
+
+
 
     }
 }
