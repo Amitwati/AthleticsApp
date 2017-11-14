@@ -3,6 +3,7 @@ package com.example.amitwati.athleticsapp;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
@@ -68,14 +69,37 @@ public class MenuActivity extends AppCompatActivity {
 
                             String[] titles = new String[]{"שיאים אישיים","תוצאות תחרויות","תוצאות מדידות"};
                             ArrayList<View.OnClickListener> l = new ArrayList<>();
-                            for(String i:titles)
-                                l.add(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Toast.makeText(MenuActivity.this, "here im going to start new intent\nname is "+s+"\nand i have context",
-                                                Toast.LENGTH_LONG).show();
-                                    }
-                                });
+
+                            //שיאים אישיים
+                            l.add(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent i = new Intent(c,ListActivity.class);
+                                    i.putExtra("TITLE","השיאים האישיים של "+s);
+                                    startActivity(i);
+                                }
+                            });
+
+                            //תוצאות תחרויות
+                            l.add(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent i = new Intent(c,ListActivity.class);
+                                    i.putExtra("TITLE","תוצאות התחרויות של "+s);
+                                    startActivity(i);
+                                }
+                            });
+
+                            //תוצאות מדידות
+                            l.add(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent i = new Intent(c,ListActivity.class);
+                                    i.putExtra("TITLE","תוצאות המדידות של "+s);
+                                    startActivity(i);
+                                }
+                            });
+
 
                             Helper.ShowDialog(c,titles,l,s,"GREEN");
                         }
