@@ -19,4 +19,8 @@
         <item name="colorAccent">@color/colorPrimary_YELLOW</item>
     </style>
 
+    <style name="DialogMeasurementTheme" parent="AppTheme">
+        <item name="colorAccent">@color/colorPrimary_GREEN</item>
+    </style>
+
 </resources>

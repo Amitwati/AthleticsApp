@@ -21,20 +21,20 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class activity_competition extends AppCompatActivity {
+public class MeasurementActivity extends AppCompatActivity {
 
-    int CurrYear= Calendar.getInstance().get(Calendar.YEAR);;
+    int CurrYear=Calendar.getInstance().get(Calendar.YEAR);;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_competition);
+        setContentView(R.layout.activity_measurement);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            (getWindow()).setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimaryDark_YELLOW));
+            (getWindow()).setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimaryDark_GREEN));
         }
         //set the toolbar
         Toolbar myToolbar = findViewById(R.id.measurement_toolbar);
-        myToolbar.setTitle("תחרויות");
+        myToolbar.setTitle("מדידות");
         setSupportActionBar(myToolbar);
 
         //set back button on the toolbar
@@ -74,9 +74,8 @@ public class activity_competition extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(c);
                 LayoutInflater inflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View v = inflater.inflate(R.layout.add_comp_dialog,null);
+                View v = inflater.inflate(R.layout.add_measure_dialog,null);
                 Button ABtn=(Button)v.findViewById(R.id.btn_item);
-                final EditText Name=(EditText)v.findViewById(R.id.Comp_Text);
                 final DatePicker Date=(DatePicker)v.findViewById(R.id.datePicker);
 
                 builder.setView(v);
@@ -105,14 +104,14 @@ public class activity_competition extends AppCompatActivity {
                         int month = Date.getMonth()+1;
                         int year =  Date.getYear();
 
-                        String s = String.valueOf(day)+ "/" + month + "/" + String.valueOf(year);
+                        String s = String.valueOf(month);
 
-                        buttons.add(Name.getText().toString()+" "+s);
+                        buttons.add("מדידות עבור חודש " +s);
                         String[] SButtons = new String[buttons.size()];
                         SButtons = buttons.toArray(SButtons);
                         ListView lv = (ListView)findViewById(R.id.ListView);
                         ArrayList<View.OnClickListener> listeners = new ArrayList<>();
-                        AdapterMenu adapterMenu = new AdapterMenu(c, SButtons,null,"YELLOW");
+                        AdapterMenu adapterMenu = new AdapterMenu(c, SButtons,null,"GREEN");
                         lv.setAdapter(adapterMenu);
                         dialog.dismiss();
                     }

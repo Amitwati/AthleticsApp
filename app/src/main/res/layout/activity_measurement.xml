@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.amitwati.athleticsapp.activity_competition"
-    android:background="@color/colorBright_YELLOW">
+    android:background="@color/colorBright_GREEN">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/measurement_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary_YELLOW"
+        android:background="@color/colorPrimary_GREEN"
         app:titleTextColor="#fff"
         android:elevation="4dp"
         app:theme="@style/ToolbarColoredBackArrow"
@@ -36,7 +36,7 @@
                 android:layout_height="60dp"
                 android:layout_alignParentTop="true"
                 android:background="@drawable/ic_chevron_left_black_24dp"
-                android:backgroundTint="@color/colorPrimaryDark_YELLOW"
+                android:backgroundTint="@color/colorPrimaryDark_GREEN"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="10dp"/>
 
@@ -46,7 +46,7 @@
                 android:layout_height="60dp"
                 android:layout_alignParentTop="true"
                 android:background="@drawable/ic_chevron_right_black_24dp"
-                android:backgroundTint="@color/colorPrimaryDark_YELLOW"
+                android:backgroundTint="@color/colorPrimaryDark_GREEN"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"/>
 
@@ -60,7 +60,7 @@
                 android:fontFamily="@font/digital"
                 android:gravity="center"
                 android:text="2017"
-                android:textColor="@color/colorPrimaryDark_YELLOW"
+                android:textColor="@color/colorPrimaryDark_GREEN"
                 android:textSize="60dp" />
 
         </RelativeLayout>
@@ -94,7 +94,7 @@
                 android:layout_margin="16dp"
                 android:src="@drawable/ic_add_black_24dp"
                 app:layout_anchor="@id/ListView"
-                app:backgroundTint="@color/colorPrimaryDark_YELLOW"
+                app:backgroundTint="@color/colorPrimary_GREEN"
                 app:layout_anchorGravity="bottom|right|end" />
 
         </android.support.design.widget.CoordinatorLayout>

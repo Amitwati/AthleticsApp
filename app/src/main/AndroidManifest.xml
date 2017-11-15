@@ -19,7 +19,8 @@
         <activity android:name=".graph_test" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ListActivity" />
-        <activity android:name=".activity_competition"></activity>
+        <activity android:name=".activity_competition" />
+        <activity android:name=".MeasurementActivity"></activity>
     </application>
 
 </manifest>

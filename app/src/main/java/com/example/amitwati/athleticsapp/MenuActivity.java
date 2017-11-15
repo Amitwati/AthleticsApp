@@ -43,6 +43,7 @@ public class MenuActivity extends AppCompatActivity {
         myToolbar.setTitle("אתלטי הנגב");
         setSupportActionBar(myToolbar);
         Button CompBtn=(Button)findViewById(R.id.competition);
+        Button MeasureBtn=(Button)findViewById(R.id.measurements);
         //set back button on the toolbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -57,6 +58,12 @@ public class MenuActivity extends AppCompatActivity {
                 ToCompActivity(view);
             }
         });
+        MeasureBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TomMeasurementActivity(view);
+            }
+        });
 
     }
 
@@ -65,6 +72,13 @@ public class MenuActivity extends AppCompatActivity {
         Intent i = new Intent(this,activity_competition.class);
         startActivity(i);
     }
+
+    public void TomMeasurementActivity(View view)
+    {
+        Intent i = new Intent(this,MeasurementActivity.class);
+        startActivity(i);
+    }
+
     public void open_dialog(View view) {
         switch(view.getId()) {
             case R.id.my_athletes:
