@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:background="@drawable/round"
+    android:backgroundTint="@color/colorBright_YELLOW">
+
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_icon"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:paddingRight="20dp"
+            android:tint="@color/colorPrimaryDark_YELLOW"/>
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back_btn"
+            android:text="הוספת תחרות"
+            android:textColor="@color/colorPrimaryDark_YELLOW"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/Ctext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/title_bar"
+        android:text="הכנס/י שם תחרות"
+        android:textSize="35dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="274dp"
+        android:textColor="@color/colorPrimaryDark_YELLOW"/>
+
+    <EditText
+        android:id="@+id/Comp_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:layout_below="@id/textView2"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="340dp"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="הכנס/י תאריך"
+        android:layout_below="@id/Comp_Text"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp"
+        android:layout_marginTop="40dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="33dp"
+        android:textColor="@color/colorPrimaryDark_YELLOW"/>
+
+    <EditText
+        android:id="@+id/Comp_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:ems="13"
+        android:text=""
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="98dp"
+        android:layout_below="@id/Ctext"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+
+        />
+    <Button
+        android:id="@+id/btn_item"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Comp_Date"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/colorPrimary_YELLOW"
+        android:elevation="15dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:text="הוספה"
+        />
+</RelativeLayout>

@@ -11,11 +11,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class activity_competition extends AppCompatActivity {
 
-    int CurrYear;
+    int CurrYear=2017;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +36,6 @@ public class activity_competition extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        CurrYear = Calendar.getInstance().get(Calendar.YEAR);
-
 
         String[] buttons = new String[]{"שיאים אישיים","שיאים אישיים","שיאים אישיים","שיאים אישיים","שיאים אישיים","שיאים אישיים","שיאים אישיים","שיאים אישיים","שיאים אישיים","תוצאות תחרויות","תוצאות מדידות"};
         ListView lv = (ListView)findViewById(R.id.ListView);
@@ -63,7 +59,7 @@ public class activity_competition extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Year.setText(Integer.toString(CurrYear+1));
-                CurrYear++;
+                CurrYear+=1;
             }
         });
     }
