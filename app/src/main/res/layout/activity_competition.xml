@@ -76,13 +76,13 @@
 
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/AddButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:background="@drawable/ic_add_circle_black"
-        android:text=""
-        android:backgroundTint="@color/colorPrimary_YELLOW"/>
+        android:backgroundTint="@color/colorPrimary_YELLOW"
+        android:text="" />
 </RelativeLayout>
