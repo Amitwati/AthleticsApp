@@ -86,7 +86,7 @@
                     android:background="@drawable/round"
                     android:backgroundTint="@color/colorPrimary_YELLOW"
                     android:elevation="15dp"
-                    android:text="קפיצה למרק"
+                    android:text="קפיצה למרחק"
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent_YELLOW"
@@ -105,7 +105,7 @@
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent_YELLOW"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="18dp" />
 
                 <Button
@@ -120,7 +120,7 @@
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent_YELLOW"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="18dp" />
 
                 <Button
@@ -131,11 +131,11 @@
                     android:background="@drawable/round"
                     android:backgroundTint="@color/colorPrimary_YELLOW"
                     android:elevation="15dp"
-                    android:text="גלגלונים"
+                    android:text="ריצת 400 מטר"
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent_YELLOW"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="18dp" />
 
                 <Button
@@ -146,11 +146,11 @@
                     android:background="@drawable/round"
                     android:backgroundTint="@color/colorPrimary_YELLOW"
                     android:elevation="15dp"
-                    android:text="ריקודי בטן"
+                    android:text="כדור ברזל"
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent_YELLOW"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="18dp" />
 
                 <Button
@@ -161,11 +161,11 @@
                     android:background="@drawable/round"
                     android:backgroundTint="@color/colorPrimary_YELLOW"
                     android:elevation="15dp"
-                    android:text="עמידה על הידיים"
+                    android:text="ריצת 60 מטר"
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent_YELLOW"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="18dp" />
 
                 <Button
@@ -176,11 +176,11 @@
                     android:background="@drawable/round"
                     android:backgroundTint="@color/colorPrimary_YELLOW"
                     android:elevation="15dp"
-                    android:text="ריקודים עם חישוקים"
+                    android:text="ריצת 600 מטר"
                     android:textStyle="bold"
                     android:textAllCaps="false"
                     android:textColor="@color/colorAccent_YELLOW"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="18dp" />
 
             </LinearLayout>

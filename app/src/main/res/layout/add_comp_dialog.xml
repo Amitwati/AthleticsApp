@@ -52,77 +52,97 @@
     <ScrollView
         android:layout_below="@id/title_bar"
         android:layout_width="match_parent"
-        android:layout_height="450dp">
+        android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/Ctext"
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/comp_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/Comp_Text"
+                    android:layout_width="350dp"
+                    android:layout_height="44dp"
+                    android:ems="13"
+                    tools:layout_editor_absoluteX="85dp"
+                    tools:layout_editor_absoluteY="98dp"
+                    android:hint="הכנס/י שם תחרות"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+            <RelativeLayout
+                android:id="@+id/picker_holder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/date_title"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="הכנס/י שם תחרות"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="163dp"
-                tools:layout_editor_absoluteY="274dp"
-                android:textColor="@color/colorPrimaryDark_YELLOW"/>
+                >
+                <DatePicker
+                    android:id="@+id/datePicker_yellow"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:inputType="date"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/YellowTheme"
+                    android:visibility="gone"/>
+                <DatePicker
+                    android:id="@+id/datePicker_green"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:inputType="date"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/GreenTheme"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"/>
+                <DatePicker
+                    android:id="@+id/datePicker_red"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:inputType="date"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/RedTheme"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"/>
+                <DatePicker
+                    android:id="@+id/datePicker_blue"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:inputType="date"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/BlueTheme"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
 
-            <EditText
-                android:id="@+id/Comp_Date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:inputType="date"
-                android:layout_below="@id/textView2"
-                android:layout_centerHorizontal="true"
-                />
-
-            <DatePicker
-                android:id="@+id/datePicker"
-                android:layout_width="250dp"
-                android:layout_height="350dp"
-                android:inputType="date"
-                android:layout_marginTop="5dp"
-                android:theme="@style/DialogTheme"
-                android:layout_below="@id/textView2"
-                android:layout_centerHorizontal="true"/>
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/date_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="הכנס/י תאריך"
-                android:layout_below="@id/Comp_Text"
+                android:layout_below="@id/comp_name_input"
                 android:layout_centerHorizontal="true"
                 android:textSize="18dp"
-                android:layout_marginTop="20dp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="163dp"
                 tools:layout_editor_absoluteY="33dp"
                 android:textColor="@color/colorPrimaryDark_YELLOW"/>
 
-            <EditText
-                android:id="@+id/Comp_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="44dp"
-                android:ems="13"
-                android:text=""
-                tools:layout_editor_absoluteX="85dp"
-                tools:layout_editor_absoluteY="98dp"
-                android:layout_below="@id/Ctext"
 
-                android:textSize="20dp"
-                android:layout_centerHorizontal="true"
-
-                />
             <Button
                 android:id="@+id/btn_item"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/datePicker"
+                android:layout_below="@id/picker_holder"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/round"
                 android:backgroundTint="@color/colorPrimary_YELLOW"

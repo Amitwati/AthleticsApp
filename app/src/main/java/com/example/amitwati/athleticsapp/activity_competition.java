@@ -77,8 +77,8 @@ public class activity_competition extends AppCompatActivity {
                 View v = inflater.inflate(R.layout.add_comp_dialog,null);
                 Button ABtn=(Button)v.findViewById(R.id.btn_item);
                 final EditText Name=(EditText)v.findViewById(R.id.Comp_Text);
-                final DatePicker Date=(DatePicker)v.findViewById(R.id.datePicker);
-
+                final DatePicker Date=(DatePicker)v.findViewById(R.id.datePicker_yellow);
+                Date.setVisibility(View.VISIBLE);
                 builder.setView(v);
 
                 //build the alert dialog view

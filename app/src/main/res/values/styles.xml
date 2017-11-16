@@ -15,12 +15,20 @@
         <item name="drawerArrowStyle">@color/colorBright_GREEN</item>
     </style>
 
-    <style name="DialogTheme" parent="AppTheme">
+    <style name="YellowTheme" parent="AppTheme">
         <item name="colorAccent">@color/colorPrimary_YELLOW</item>
     </style>
 
-    <style name="DialogMeasurementTheme" parent="AppTheme">
+    <style name="GreenTheme" parent="AppTheme">
         <item name="colorAccent">@color/colorPrimary_GREEN</item>
+    </style>
+
+    <style name="BlueTheme" parent="AppTheme">
+        <item name="colorAccent">@color/colorPrimary_BLUE</item>
+    </style>
+
+    <style name="RedTheme" parent="AppTheme">
+        <item name="colorAccent">@color/colorPrimary_RED</item>
     </style>
 
 </resources>
