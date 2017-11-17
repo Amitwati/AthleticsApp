@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.main_toolbar);
         myToolbar.setTitle("אתלטי הנגב");
         setSupportActionBar(myToolbar);
+
+
     }
 
     public void tomenu(View view) {
