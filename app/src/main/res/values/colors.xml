@@ -8,7 +8,7 @@
     <color name="colorPrimaryDark_GREEN">#26764e</color>
     <color name="colorPrimary_GREEN">#399e6c</color>
     <color name="colorAccent_GREEN">#1f794c</color>
-    <color name="colorBright_GREEN">#e2ece7</color>
+    <color name="colorBright_GREEN">#daf5e7</color>
 
     <color name="colorPrimaryDark_RED">#2d2121</color>
     <color name="colorPrimary_RED">#be5e59</color>
@@ -18,10 +18,10 @@
     <color name="colorPrimaryDark_BLUE">#21262d</color>
     <color name="colorPrimary_BLUE">#59a5be</color>
     <color name="colorAccent_BLUE">#307a9f</color>
-    <color name="colorBright_BLUE">#e2e8ec</color>
+    <color name="colorBright_BLUE">#f0f9ff</color>
 
     <color name="colorPrimaryDark_YELLOW">#F9A003</color>
     <color name="colorPrimary_YELLOW">#FFBA00</color>
     <color name="colorAccent_YELLOW">#ffffff</color>
-    <color name="colorBright_YELLOW">#ecebde</color>
+    <color name="colorBright_YELLOW">#faf8e4</color>
 </resources>
