@@ -1,5 +1,6 @@
 package com.example.amitwati.athleticsapp;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Build;
@@ -87,6 +88,7 @@ public class MeasurementActivity extends AppCompatActivity {
         fab.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimaryDark_GREEN));
         fab.setOnClickListener(new View.OnClickListener() {
 
+            @SuppressLint("ResourceType")
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(c);
