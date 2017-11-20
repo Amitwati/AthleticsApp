@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBright_RED"
-
-    tools:context="com.example.amitwati.athleticsapp.MenuActivity">
+    android:id="@+id/Relative"
+    tools:context="com.example.amitwati.athleticsapp.CoachMenu">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/main_toolbar"
@@ -42,7 +42,8 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/logo"
             android:orientation="vertical"
-            android:gravity="center"
+            android:gravity="top"
+            android:layout_marginTop="7dp"
             android:weightSum="10">
 
             <Button
@@ -58,7 +59,7 @@
                 android:textColor="@color/colorBright_RED"
                 android:textSize="18dp"
                 android:layout_margin="7dp"
-                android:onClick="open_dialog"/>
+                android:onClick="open_dialog" />
 
             <Button
                 android:id="@+id/competition"

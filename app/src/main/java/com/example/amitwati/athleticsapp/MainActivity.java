@@ -27,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tomenu(View view) {
-        Intent i = new Intent(this,MenuActivity.class);
+        Intent i = new Intent(this,CoachMenu.class);
+        startActivity(i);
+    }
+
+    public void toAmenu(View view) {
+        Intent i = new Intent(this,AthletesMenu.class);
         startActivity(i);
     }
 
