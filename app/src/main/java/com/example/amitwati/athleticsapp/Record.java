@@ -37,29 +37,44 @@ public class Record {
             case "YELLOW":
                 tx1.setTextColor(ContextCompat.getColorStateList(context, R.color.colorBright_YELLOW));
                 tx2.setTextColor(ContextCompat.getColorStateList(context, R.color.colorBright_YELLOW));
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
                     layout.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorPrimary_YELLOW));
                 }
+                else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP){
+                    layout.setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimary_YELLOW));
+                }
                 break;
+
             case "BLUE":
                 tx1.setTextColor(ContextCompat.getColorStateList(context, R.color.colorBright_BLUE));
                 tx2.setTextColor(ContextCompat.getColorStateList(context, R.color.colorBright_BLUE));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     layout.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorPrimary_BLUE));
                 }
+                else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP){
+                    layout.setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimary_BLUE));
+                }
                 break;
+
             case "RED":
                 tx1.setTextColor(ContextCompat.getColorStateList(context, R.color.colorBright_RED));
                 tx2.setTextColor(ContextCompat.getColorStateList(context, R.color.colorBright_RED));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     layout.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorPrimary_RED));
                 }
+                else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP){
+                    layout.setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimary_RED));
+                }
                 break;
+
             case "GREEN":
                 tx1.setTextColor(ContextCompat.getColorStateList(context, R.color.colorBright_GREEN));
                 tx2.setTextColor(ContextCompat.getColorStateList(context, R.color.colorBright_GREEN));
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     layout.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorPrimary_GREEN));
+                }
+                else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP){
+                    layout.setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimary_GREEN));
                 }
                 break;
 
