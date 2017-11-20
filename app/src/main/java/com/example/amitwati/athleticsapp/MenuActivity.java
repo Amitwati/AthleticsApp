@@ -82,7 +82,8 @@ public class MenuActivity extends AppCompatActivity {
     public void open_dialog(View view) {
         switch(view.getId()) {
             case R.id.my_athletes:
-                final String[] names = new String[]{"עומרי אבידן", "עמית טואטי", "ירדן צ'רי", "סקאזי", "אילון מתנה"};
+                final String[] names = new String[]{"עומרי אבידן", "עמית טואטי", "ירדן צ'רי", "סקאזי", "אילון מתנה","אביב אדר","דניאל ברומברג",
+                        "אדיר אבוחצירה","מייקל ג'קסון","ליאורה מלכיאל"};
                 ArrayList<View.OnClickListener> listeners = new ArrayList<>();
                 final Context c = this;
                 for(int i=0;i<names.length;i++){
