@@ -18,7 +18,36 @@
         android:elevation="4dp"
         app:theme="@style/ToolbarColoredBackArrow"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|right"
+            android:padding="7dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_icon"
+                android:layout_alignParentRight="true"
+                android:id="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/tb_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/imageView"
+                android:gravity="center|right"
+                android:text="תחרויות"
+                android:textColor="@color/colorAccent_YELLOW"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
 

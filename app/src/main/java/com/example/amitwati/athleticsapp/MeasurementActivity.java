@@ -39,10 +39,9 @@ public class MeasurementActivity extends AppCompatActivity {
         }
 
 
-
         //set the toolbar
         Toolbar myToolbar = findViewById(R.id.measurement_toolbar);
-        myToolbar.setTitle("מדידות");
+        ((TextView)findViewById(R.id.tb_title)).setText("מדידות");
         myToolbar.setBackgroundColor(ContextCompat.getColor(this,R.color.colorPrimary_GREEN));
         setSupportActionBar(myToolbar);
 

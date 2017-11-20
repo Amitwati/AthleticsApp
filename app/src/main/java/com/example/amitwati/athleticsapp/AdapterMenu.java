@@ -69,22 +69,18 @@ public class AdapterMenu extends BaseAdapter {
 
                 case "RED":
                     b.setBackgroundTintList(context.getResources().getColorStateList(R.color.colorPrimary_RED));
-                    b.setTextColor(context.getResources().getColor(R.color.colorBright_RED));
                     break;
 
                 case "BLUE":
                     b.setBackgroundTintList(context.getResources().getColorStateList(R.color.colorPrimary_BLUE));
-                    b.setTextColor(context.getResources().getColor(R.color.colorBright_BLUE));
                     break;
 
                 case "YELLOW":
                     b.setBackgroundTintList(context.getResources().getColorStateList(R.color.colorPrimary_YELLOW));
-                    b.setTextColor(context.getResources().getColor(R.color.colorBright_YELLOW));
                     break;
 
                 default:
                     b.setBackgroundTintList(context.getResources().getColorStateList(R.color.colorPrimary_GREEN));
-                    b.setTextColor(context.getResources().getColor(R.color.colorBright_GREEN));
                     break;
             }
         }

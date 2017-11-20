@@ -34,7 +34,7 @@ public class activity_competition extends AppCompatActivity {
         }
         //set the toolbar
         Toolbar myToolbar = findViewById(R.id.measurement_toolbar);
-        myToolbar.setTitle("תחרויות");
+        ((TextView)findViewById(R.id.tb_title)).setText("תחרויות");
         setSupportActionBar(myToolbar);
 
         //set back button on the toolbar

@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -40,7 +43,24 @@ public class ListActivity extends AppCompatActivity {
         String title = extra.getString("TITLE");
         ((TextView)findViewById(R.id.tb_title)).setText(title);
 
+        ListView lv = findViewById(R.id.list_records);
 
+        ArrayList<Record> records = new ArrayList<>();
+        records.add(new Record(this,"sss","ssss","YELLOW"));
+        records.add(new Record(this,"sss","ssss","GREEN"));
+        records.add(new Record(this,"sss","ssss","BLUE"));
+        records.add(new Record(this,"sss","ssss","RED"));
+        records.add(new Record(this,"sss","ssss","YELLOW"));
+        records.add(new Record(this,"sss","ssss","GREEN"));
+        records.add(new Record(this,"sss","ssss","BLUE"));
+        records.add(new Record(this,"sss","ssss","RED"));
+        records.add(new Record(this,"sss","ssss","YELLOW"));
+        records.add(new Record(this,"sss","ssss","GREEN"));
+        records.add(new Record(this,"sss","ssss","BLUE"));
+        records.add(new Record(this,"sss","ssss","RED"));
+
+        RecordAdapter adapter = new RecordAdapter(records);
+        lv.setAdapter(adapter);
 
 
 
