@@ -23,7 +23,7 @@ public class Record {
         if(inflater == null)
             inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         assert inflater != null;
-        record_view = inflater.inflate(R.layout.records_list_item,null);
+        record_view =  inflater.inflate(R.layout.records_list_item,null);
 
         TextView tx1 = record_view.findViewById(R.id.title_rec);
         TextView tx2 = record_view.findViewById(R.id.value_rec);
