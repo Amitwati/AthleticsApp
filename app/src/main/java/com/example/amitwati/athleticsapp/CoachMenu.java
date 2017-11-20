@@ -101,6 +101,7 @@ public class CoachMenu extends AppCompatActivity {
                                 public void onClick(View view) {
                                     Intent i = new Intent(c,ListActivity.class);
                                     i.putExtra("TITLE","השיאים האישיים של "+s);
+                                    i.putExtra("CODE","RECORDS");
                                     startActivity(i);
                                 }
                             });
@@ -111,6 +112,7 @@ public class CoachMenu extends AppCompatActivity {
                                 public void onClick(View view) {
                                     Intent i = new Intent(c,ListActivity.class);
                                     i.putExtra("TITLE","תוצאות התחרויות של "+s);
+                                    i.putExtra("CODE","LIST");
                                     startActivity(i);
                                 }
                             });
@@ -121,6 +123,7 @@ public class CoachMenu extends AppCompatActivity {
                                 public void onClick(View view) {
                                     Intent i = new Intent(c,ListActivity.class);
                                     i.putExtra("TITLE","תוצאות המדידות של "+s);
+                                    i.putExtra("CODE","LIST");
                                     startActivity(i);
                                 }
                             });

@@ -189,15 +189,18 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/records_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/list_layout_tb">
+        android:layout_below="@id/list_layout_tb"
+        android:visibility="gone">
 
         <ListView
             android:id="@+id/list_records"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:listitem="@layout/records_list_item"
+            android:layout_marginTop="15dp"
             android:divider="@null"
             android:clipToPadding="false"
             />

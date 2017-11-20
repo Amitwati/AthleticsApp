@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             (getWindow()).setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimaryDark_YELLOW));
@@ -40,28 +42,26 @@ public class ListActivity extends AppCompatActivity {
         assert extra != null;
 
         //set the title
-        String title = extra.getString("TITLE");
+        String title = extra.getString("TITLE"),Code = extra.getString("CODE");
         ((TextView)findViewById(R.id.tb_title)).setText(title);
+        assert Code != null;
+        if(Code.equals("LIST")){
+            findViewById(R.id.list_layout).setVisibility(View.VISIBLE);
+        }
+        else if(Code.equals("RECORDS")) {
+            findViewById(R.id.records_layout).setVisibility(View.VISIBLE);
+            ListView lv = findViewById(R.id.list_records);
+            ArrayList<Record> records = new ArrayList<>();
+            records.add(new Record(this, "קפיצה למרחק", "17 מטר", "YELLOW"));
+            records.add(new Record(this, "קפיצה לגובה", "3 מטר", "YELLOW"));
+            records.add(new Record(this, "ריצה 100 מטר", "09:36:17", "YELLOW"));
+            records.add(new Record(this, "ריצה 200 מטר", "18:45:19", "YELLOW"));
+            records.add(new Record(this, "ריצה 400 מטר", "30:13:29", "YELLOW"));
+            records.add(new Record(this, "כדור ברזל", "אין לי מושג מה זה אומר בכלל", "YELLOW"));
 
-        ListView lv = findViewById(R.id.list_records);
-
-        ArrayList<Record> records = new ArrayList<>();
-        records.add(new Record(this,"sss","ssss","YELLOW"));
-        records.add(new Record(this,"sss","ssss","GREEN"));
-        records.add(new Record(this,"sss","ssss","BLUE"));
-        records.add(new Record(this,"sss","ssss","RED"));
-        records.add(new Record(this,"sss","ssss","YELLOW"));
-        records.add(new Record(this,"sss","ssss","GREEN"));
-        records.add(new Record(this,"sss","ssss","BLUE"));
-        records.add(new Record(this,"sss","ssss","RED"));
-        records.add(new Record(this,"sss","ssss","YELLOW"));
-        records.add(new Record(this,"sss","ssss","GREEN"));
-        records.add(new Record(this,"sss","ssss","BLUE"));
-        records.add(new Record(this,"sss","ssss","RED"));
-
-        RecordAdapter adapter = new RecordAdapter(records);
-        lv.setAdapter(adapter);
-
+            RecordAdapter adapter = new RecordAdapter(records);
+            lv.setAdapter(adapter);
+        }
 
 
     }
