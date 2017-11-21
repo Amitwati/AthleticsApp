@@ -35,7 +35,6 @@ public class AdapterMenu extends BaseAdapter {
     public AdapterMenu(Context c, String[] btns, ArrayList<View.OnClickListener> listener_list , String col) {
         context = c;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        buttons_titles = new ArrayList<>();
         color = col;
         buttons_titles = new ArrayList<>(Arrays.asList(btns));
         buttons_listeners = listener_list;

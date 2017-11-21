@@ -22,6 +22,8 @@ import java.util.Arrays;
  */
 
 public class Helper {
+    static String[] AmitList = new String[]{"קפיצה למרחק","קפיצה לגובה","ריצה 60 מטר","ריצה 100 מטר","ריצה 400 מטר","ריצה 600 מטר","כדור ברזל"};
+
     static void ShowDialog(Context context, String[] buttons, ArrayList<View.OnClickListener> listeners, String title, String color){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 

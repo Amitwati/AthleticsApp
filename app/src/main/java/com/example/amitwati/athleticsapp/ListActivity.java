@@ -52,12 +52,12 @@ public class ListActivity extends AppCompatActivity {
             findViewById(R.id.records_layout).setVisibility(View.VISIBLE);
             ListView lv = findViewById(R.id.list_records);
             ArrayList<Record> records = new ArrayList<>();
-            records.add(new Record(this, "קפיצה למרחק", "17 מטר", "YELLOW"));
-            records.add(new Record(this, "קפיצה לגובה", "3 מטר", "YELLOW"));
-            records.add(new Record(this, "ריצה 100 מטר", "09:36:17", "YELLOW"));
-            records.add(new Record(this, "ריצה 200 מטר", "18:45:19", "YELLOW"));
-            records.add(new Record(this, "ריצה 400 מטר", "30:13:29", "YELLOW"));
-            records.add(new Record(this, "כדור ברזל", "אין לי מושג מה זה אומר בכלל", "YELLOW"));
+            records.add(new Record(this, "קפיצה למרחק","17 מטר",false, "YELLOW"));
+            records.add(new Record(this, "קפיצה לגובה", "3 מטר",false, "YELLOW"));
+            records.add(new Record(this, "ריצה 100 מטר", "09:36:17",false, "YELLOW"));
+            records.add(new Record(this, "ריצה 200 מטר", "18:45:19",false ,"YELLOW"));
+            records.add(new Record(this, "ריצה 400 מטר", "30:13:29",false ,"YELLOW"));
+            records.add(new Record(this, "כדור ברזל", "אין לי מושג מה זה אומר בכלל",false ,"YELLOW"));
 
             RecordAdapter adapter = new RecordAdapter(records);
             lv.setAdapter(adapter);

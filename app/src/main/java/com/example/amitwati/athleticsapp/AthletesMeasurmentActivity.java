@@ -31,19 +31,23 @@ public class AthletesMeasurmentActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
         Button CEbtn=(Button)findViewById(R.id.button1);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             CEbtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimary_RED));
         }
-        Button CStn=(Button)findViewById(R.id.button3);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            CStn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimary_RED));
-        }
+        CEbtn.setText("עריכת תוצאות");
 
         Button PRtn=(Button)findViewById(R.id.button2);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             PRtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimary_RED));
         }
+
+        Button CStn=(Button)findViewById(R.id.button3);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            CStn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimary_RED));
+        }
+        CStn.setText("הצגת מדידות");
 
 
     }
