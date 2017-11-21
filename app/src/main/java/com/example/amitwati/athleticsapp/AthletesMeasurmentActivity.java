@@ -36,7 +36,7 @@ public class AthletesMeasurmentActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             CEbtn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimary_RED));
         }
-        CEbtn.setText("עריכת תוצאות");
+        CEbtn.setText("עריכת תוצאות של מדידות");
 
         Button PRtn=(Button)findViewById(R.id.button2);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -47,7 +47,7 @@ public class AthletesMeasurmentActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             CStn.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimary_RED));
         }
-        CStn.setText("הצגת מדידות");
+        CStn.setText("הצגת תוצאות של מדידות");
 
 
     }
