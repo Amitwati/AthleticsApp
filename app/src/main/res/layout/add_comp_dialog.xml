@@ -78,49 +78,16 @@
                     />
 
             </android.support.design.widget.TextInputLayout>
-            <RelativeLayout
-                android:id="@+id/picker_holder"
-                android:layout_width="wrap_content"
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
+                android:inputType="date"
+                android:layout_marginTop="5dp"
                 android:layout_below="@id/date_title"
                 android:layout_centerHorizontal="true"
-                >
-                <DatePicker
-                    android:id="@+id/datePicker_yellow"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:layout_marginTop="5dp"
-                    android:theme="@style/YellowTheme"
-                    android:visibility="gone"/>
-                <DatePicker
-                    android:id="@+id/datePicker_green"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:layout_marginTop="5dp"
-                    android:theme="@style/GreenTheme"
-                    android:layout_centerHorizontal="true"
-                    android:visibility="gone"/>
-                <DatePicker
-                    android:id="@+id/datePicker_red"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:layout_marginTop="5dp"
-                    android:theme="@style/RedTheme"
-                    android:layout_centerHorizontal="true"
-                    android:visibility="gone"/>
-                <DatePicker
-                    android:id="@+id/datePicker_blue"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:layout_marginTop="5dp"
-                    android:theme="@style/BlueTheme"
-                    android:layout_centerHorizontal="true"
-                    android:visibility="gone"/>
-            </RelativeLayout>
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"/>
 
 
             <TextView
@@ -141,7 +108,7 @@
                 android:id="@+id/btn_item"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
-                android:layout_below="@id/picker_holder"
+                android:layout_below="@id/datePicker"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/round"
                 android:backgroundTint="@color/colorPrimary_YELLOW"

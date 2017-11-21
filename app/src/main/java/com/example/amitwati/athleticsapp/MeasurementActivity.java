@@ -97,8 +97,7 @@ public class MeasurementActivity extends AppCompatActivity {
                 ((RelativeLayout) v.findViewById(R.id.main_layout)).setBackgroundColor(ContextCompat.getColor(c,R.color.colorBright_GREEN));
 
                 Button ABtn=(Button)v.findViewById(R.id.btn_item);
-                final DatePicker Date=(DatePicker)v.findViewById(R.id.datePicker_green);
-                Date.setVisibility(View.VISIBLE);
+                final DatePicker Date=(DatePicker)v.findViewById(R.id.datePicker);
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     ABtn.setBackgroundTintList(ContextCompat.getColorStateList(c, R.color.colorPrimary_GREEN));
