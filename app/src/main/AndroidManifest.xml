@@ -12,6 +12,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -23,6 +24,7 @@
         <activity android:name=".CoachMenu" />
         <activity android:name=".AthletesContestActivity" />
         <activity android:name=".AthletesMeasurmentActivity" />
+        <activity android:name=".ShowTrainingsActivity"></activity>
     </application>
 
 </manifest>

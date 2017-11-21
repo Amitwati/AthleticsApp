@@ -138,6 +138,30 @@ public class CoachMenu extends AppCompatActivity {
                         ((Button) view).getText().toString(), "BLUE");
                 break;
 
+            case R.id.trainings:
+                final Context c2 = this;
+                final String[] Options = new String[]{"הוספת אימון","הצגת אימונים"};
+                ArrayList<View.OnClickListener> Tlisteners = new ArrayList<>();
+                Tlisteners.add(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view) {
+                        Intent i = new Intent(c2,ShowTrainingsActivity.class);
+                        startActivity(i);
+                    }
+                });
+
+                Tlisteners.add(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view) {
+                        Intent i = new Intent(c2,ShowTrainingsActivity.class);
+                        startActivity(i);
+                    }
+                });
+
+                Helper.ShowDialog(this, Options,Tlisteners,
+                        ((Button) view).getText().toString(), "GREEN");
+                break;
+
         }
     }
 
